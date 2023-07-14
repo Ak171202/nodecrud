@@ -30,7 +30,7 @@ function Update() {
     onSubmit: async (values) => {
       delete values._id
       try {
-        await axios.put(`https://node-crud-virw.onrender.com/user/${params.id}`, values); 
+        await axios.put(`https://node-crud-virw.onrender.com/${params.id}`, values); 
         Navigate("/");
       } catch (error) {
         console.log(error);
