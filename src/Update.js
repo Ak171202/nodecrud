@@ -8,7 +8,7 @@ function Update() {
   useEffect(() => {
    return async ()=>{
       try {
-        let user = await axios.get(`http://localhost:3000/user/${params.id}`);
+        let user = await axios.get(`https://node-crud-virw.onrender.com/user/${params.id}`);
         console.log(params)
         formik.setValues(user.data);
       } catch (error) {
@@ -30,7 +30,7 @@ function Update() {
     onSubmit: async (values) => {
       delete values._id
       try {
-        await axios.put(`http://localhost:3000/user/${params.id}`, values); 
+        await axios.put(`https://node-crud-virw.onrender.com/user/${params.id}`, values); 
         Navigate("/");
       } catch (error) {
         console.log(error);

@@ -14,7 +14,7 @@ function Create() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:3000/create-user", values);
+        await axios.post("https://node-crud-virw.onrender.com/create-user", values);
         Navigate("/");
       } catch (error) {
         console.log(error);

@@ -10,7 +10,7 @@ function UserList() {
     }, [])
     async function gettingdata() {
         try {
-            var data = await axios.get(`http://localhost:3000/user`);
+            var data = await axios.get(`https://node-crud-virw.onrender.com/user`);
             setuser(data.data);
         } catch (error) {
             console.log(error);
@@ -21,7 +21,7 @@ function UserList() {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
                 console.log(_id)
-                await axios.delete(`http://localhost:3000/user/${_id}`)
+                await axios.delete(`https://node-crud-virw.onrender.com/user/${_id}`)
                 alert("User account deleted")
                 gettingdata();
             }
