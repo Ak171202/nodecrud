@@ -6,7 +6,9 @@ function Update() {
   let params = useParams();
 
   useEffect(() => {
+    console.log("test 1")
    return async ()=>{
+    console.log("test 2")
       try {
         let user = await axios.get(`https://node-crud-virw.onrender.com/user/${params.id}`);
         console.log(params)
